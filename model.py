@@ -112,7 +112,7 @@ class gwnet(nn.Module):
                                                      kernel_size=(1, 1)))
 
                 # 1x1 convolution for skip connection
-                self.skip_convs.append(nn.Conv1d(in_channels=dilation_channels,
+                self.skip_convs.append(nn.Conv2d(in_channels=dilation_channels,
                                                  out_channels=skip_channels,
                                                  kernel_size=(1, 1)))
                 self.bn.append(nn.BatchNorm2d(residual_channels))
